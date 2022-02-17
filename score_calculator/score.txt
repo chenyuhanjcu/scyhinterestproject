@@ -1,0 +1,2 @@
+CP1404,exam_96_100_0.5,assessment_88_100_0.5
+CP2404,exam_89_100_0.2,assessment_94_100_0.5
