@@ -1,0 +1,38 @@
+BoxLayout:
+    orientation: 'vertical'
+    Label:
+        text:"Modules:"
+        font_size: 20
+        size_hint_y: None
+        height:60
+    BoxLayout:
+        orientation: 'horizontal'
+        height:20
+        Label:
+            text:"Sort by:"
+            size_hint_y: None
+            height:60
+        Spinner:
+            id: sort_list
+            text: app.current_sort_method
+            values: app.sort_methods
+            on_text: app.change_sort_method(self.text)
+            size_hint_y: None
+            height:60
+    BoxLayout:
+        orientation: 'vertical'
+        id: modules_box
+        height:200
+#        font_size: 48
+#        on_release: app.clear_all()
+    BoxLayout:
+        orientation: 'horizontal'
+        height:20
+        TextInput:
+            id:input_module
+        Button:
+            text:"Add Module"
+            on_release: app.add_module()
+    Label:
+        text:app.status_text
+        font_size: 20
